@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#removing old images
+docker rm gems-lamernews
+docker rm lamernewsdata
+docker rm redisdata
+
 sudo docker create -v /gems/lamernews/ --name gems-lamernews busybox:latest
 sudo docker create -v /app --name lamernewsdata busybox:latest
 sudo docker create -v /data --name redisdata busybox:latest
