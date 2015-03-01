@@ -11,6 +11,7 @@ sudo docker rm gems-lamernews
 sudo docker rm lamernewsdata
 sudo docker rm redisdata
 sudo docker rm redisserver
+sudo docker rm lamernews
 
 echo setting up everything
 echo sudo docker create -v /gems/lamernews/ --name gems-lamernews busybox:latest
