@@ -17,7 +17,7 @@ sudo docker rm lamernews
 
 echo setting up everything
 sudo docker create -v /gems/lamernews/ --name gems-lamernews busybox:latest
-sudo docker create -v /app/ --name lamernewsdata busybox:latest
+sudo docker create -v /app/data --name lamernewsdata busybox:latest
 sudo docker create -v /data/ --name redisdata busybox:latest
 echo sudo docker pull redis
 sudo docker pull redis
