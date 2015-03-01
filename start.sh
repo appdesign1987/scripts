@@ -15,4 +15,4 @@ gem install json -v 1.7.7
 gem install ruby-hmac -v 0.4.0
 
 #starting application
-cd /app/app/lamernews && bundle exec rackup -p4567 --host 0.0.0.0
+cd /app/data/lamernews && bundle exec rackup -p4567 --host 0.0.0.0
