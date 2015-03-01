@@ -4,7 +4,7 @@
 cd /app/data && git clone https://github.com/appdesign1987/lamernews.git
 
 #See if theres some new data on github
-cd /app/data/lamernews && git pull https://github.com/appdesign1987/lamernews.git
+#cd /app/data/lamernews && git pull https://github.com/appdesign1987/lamernews.git
 
 #Running bundle
 cd /app/data/lamernews && bundle install
