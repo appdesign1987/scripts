@@ -1,6 +1,7 @@
 #!/usr/bin/env bash
 
 #stopping al docker images
+echo stopping al docker images
 sudo docker stop redisserver
 sudo docker stop lamernews
 
@@ -11,6 +12,7 @@ sudo docker rm lamernewsdata
 sudo docker rm redisdata
 sudo docker rm redisserver
 
+echo setting up everything
 sudo docker create -v /gems/lamernews/ --name gems-lamernews busybox:latest
 sudo docker create -v /app --name lamernewsdata busybox:latest
 sudo docker create -v /data --name redisdata busybox:latest
