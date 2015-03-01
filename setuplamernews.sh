@@ -4,6 +4,8 @@
 echo stopping al docker images
 sudo docker stop redisserver
 sudo docker stop lamernews
+sudo docker stop lamernewsdata
+
 
 #removing old images
 echo removing old docker containers
@@ -14,12 +16,9 @@ sudo docker rm redisserver
 sudo docker rm lamernews
 
 echo setting up everything
-echo sudo docker create -v /gems/lamernews/ --name gems-lamernews busybox:latest
 sudo docker create -v /gems/lamernews/ --name gems-lamernews busybox:latest
-echo sudo docker create -v /app --name lamernewsdata busybox:latest
-sudo docker create -v /app --name lamernewsdata busybox:latest
-echo sudo docker create -v /data --name redisdata busybox:latest
-sudo docker create -v /data --name redisdata busybox:latest
+sudo docker create -v /app/ --name lamernewsdata busybox:latest
+sudo docker create -v /data/ --name redisdata busybox:latest
 echo sudo docker pull redis
 sudo docker pull redis
 echo sudo docker run --name redisserver --volumes-from redisdata -d redis redis-server --appendonly yes
