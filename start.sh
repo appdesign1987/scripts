@@ -3,6 +3,9 @@
 #Git clone app
 cd /data/app && git clone https://github.com/appdesign1987/lamernews.git
 
+#See if theres some new data on github
+cd /data/app/lamernews && git pull https://github.com/appdesign1987/lamernews.git
+
 #Running bundle
 cd /data/app/lamernews && bundle install
 
