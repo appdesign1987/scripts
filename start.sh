@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#Git clone app
+cd /app && 
+
 #Running bundle
 cd /app/lamernews && bundle install
 
