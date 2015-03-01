@@ -4,7 +4,7 @@
 cd /data/app && git clone https://github.com/appdesign1987/lamernews.git
 
 #Running bundle
-cd /app/lamernews && bundle install
+cd /data/app/lamernews && bundle install
 
 #installing gems
 gem install bundler
@@ -15,4 +15,4 @@ gem install json -v 1.7.7
 gem install ruby-hmac -v 0.4.0
 
 #starting application
-cd /app/lamernews && bundle exec rackup -p4567 --host 0.0.0.0
+cd /app/app/lamernews && bundle exec rackup -p4567 --host 0.0.0.0
