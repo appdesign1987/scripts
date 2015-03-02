@@ -29,3 +29,15 @@ echo sudo docker build --no-cache -t jeroen/lamernewsapp .
 sudo docker build --no-cache -t jeroen/lamernewsapp .
 echo sudo docker run --volumes-from gems-lamernews --volumes-from lamernewsdata -d -P -p 0.0.0.0:8080:4567 -i -t --name lamernews --link redisserver:redis jeroen/lamernewsapp
 sudo docker run --volumes-from gems-lamernews --volumes-from lamernewsdata -d -P -p 0.0.0.0:8080:4567 -i -t --name lamernews --link redisserver:redis jeroen/lamernewsapp
+echo                              *************************************************************************************************************************************                                                                                                                                   *  
+echo                              *                                                                                                                                   *
+echo                              *                                                                                                                                   *
+echo                              *                                                                                                                                   *
+echo                              *                       Dit script is klaar met draaien. De lamernews app kan nu worden gestart via HOSTIP:8080                     *                                                       
+echo                              *                       Door het script nogmaals uit te voeren zal alle data worden verwijderd zodat opnieuw kan worden begonnen    *
+echo                              *                                                                                                                                   *
+echo                              *                                                                                                                                   *
+echo                              *                                                                                                                                   *
+echo                              *                                                                                                                                   *
+echo                              *                                                                                                                                   *
+echo                              *************************************************************************************************************************************
