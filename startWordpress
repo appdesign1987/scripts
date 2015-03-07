@@ -1,0 +1,7 @@
+#!/usr/bin/env bash
+
+#Git clone Wordpress
+cd /var/www && git clone --depth=0 https://github.com/WordPress/WordPress.git /
+
+#starting application
+cd /app/data/lamernews && bundle exec rackup -p4567 --host 0.0.0.0
