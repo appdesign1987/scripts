@@ -9,19 +9,6 @@ export directory=/srv/seafile/seafile-server-$seafileversion
 
 #DO NOT TOUCH BELOW THIS LINE
 
-if [ -d "$DIRECTORY" ]; then
-  
-  #start seafile
-  cd /srv/seafile/seafile-server-latest && ./seafile.sh start
-  
-  #start seafileserver hub 
-  cd /srv/seafile/seafile-server-latest && ./seahub.sh start-fastcgi
-  
- # Start apache
-/usr/sbin/apache2 -D FOREGROUND
-  
-fi
-
 #remove symlink
 rm /srv/seafile/seafile-server-latest
 
