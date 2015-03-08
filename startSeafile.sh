@@ -6,7 +6,8 @@ if [ -d "$DIRECTORY" ]; then
 cd /srv/seafile/seafile-server-latest && ./seafile.sh start
 cd /srv/seafile/seafile-server-latest && ./seahub.sh start-fastcgi
 
-#start apache
+# Start apache
+/usr/sbin/apache2 -D FOREGROUND
 
 fi
 
