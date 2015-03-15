@@ -1,20 +1,12 @@
 #!/usr/bin/env bash
 
-#Install necessary things
-apt-get install curl
-
 #Git clone Baikal
-cd /var/www && git clone -b branch-2 https://github.com/netgusto/Baikal.git
+cd /var/www && wget http://baikal-server.com/get/baikal-regular-0.2.7.tgz
 
-#Install composer
-cd /var/www/Baikal && curl -sS https://getcomposer.org/installer | php
+#Extract archive
+cd /var/www/ && tar xzf baikal-0.2.7.tgz
 
-#Initialize the application settings
-cd /var/www/Baikal && cp app/config/defaults/data.parameters.dist.yml data/parameters.yml
-cd /var/www/Baikal && cp app/config/defaults/data.environment.dist.yml data/environment.yml
+#mv extracted data from archived folder to root
+cd /var/www/baikal-0.2.7 && mv -Rf * ../
 
-#Install Baikal dependencies
-cd /var/www/Baikal && composer install --optimize-autoloader
 
-#Start application
-cd /var/www/Baikal && php app/console server:run --env=prod
