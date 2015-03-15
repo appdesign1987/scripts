@@ -7,20 +7,21 @@ cd /var/www && wget http://baikal-server.com/get/baikal-regular-0.2.7.tgz
 cd /var/www/ && tar xzf baikal-regular-0.2.7.tgz
 
 #mv extracted data from archived folder to root
-cd /var/www/baikal-regular && mv -Rf * ../
+cd /var/www/baikal-regular && mv -f * ../
 
 #remove extracted directory
 rm -R /var/www/baikal-regular
+rm baikal-regular-0.2.7.tgz
 
 #remove default apache2 config
-rm /etc/apache2/sites-enabled/default*
-rm /etc/apache2/sites-available/default*
+rm /etc/apache2/sites-enabled/000-default*
+rm /etc/apache2/sites-available/000-default*
 
 #Get apache config
 cd /tmp && git clone https://github.com/appdesign1987/ApacheConfig.git
 
 #Move ApacheConfig
-cd /tmp/ApacheConfig && mv baikal /etc/apache2/sites-available/
+cd /tmp/ApacheConfig && mv baikal /etc/apache2/sites-enabled/000-default
 
 #Start Apache
 /usr/sbin/apache2 -D FOREGROUND
