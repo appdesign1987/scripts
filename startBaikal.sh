@@ -26,6 +26,9 @@ cd /tmp/ApacheConfig && mv baikal /etc/apache2/sites-enabled/000-default
 #Enable mod_rewrite
 a2enmod rewrite
 
+#Set folder rights once more
+cd /var/ && chown -R www-data:www-data www
+
 #restart Apache2
 service apache2 restart
 
