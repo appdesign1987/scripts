@@ -29,5 +29,9 @@ a2enmod rewrite
 #restart Apache2
 service apache2 restart
 
+#To make sure Apache starts in a good state we stop it once more
+service apache2 stop
+/etc/init.d/apache2 stop
+
 #Start Apache
 /usr/sbin/apache2 -D FOREGROUND
