@@ -26,5 +26,8 @@ cd /tmp/ApacheConfig && mv baikal /etc/apache2/sites-enabled/000-default
 #Enable mod_rewrite
 a2enmod rewrite
 
+#restart Apache2
+service apache2 restart
+
 #Start Apache
 /usr/sbin/apache2 -D FOREGROUND
