@@ -8,6 +8,7 @@
 #get VMadmin
 cd /var/www && git clone git://github.com/opensolutions/ViMbAdmin.git
 cd /var/www/ViMbAdmin && mv -f * ../
+cd /var/www && rm -R ViMbAdmin
 
 #Set folder rights once more
 cd /var/ && chown -R www-data:www-data www
