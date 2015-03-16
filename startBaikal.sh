@@ -24,17 +24,17 @@ cd /tmp && git clone https://github.com/appdesign1987/ApacheConfig.git
 cd /tmp/ApacheConfig && mv baikal /etc/apache2/sites-enabled/000-default
 
 #Enable mod_rewrite
-a2enmod rewrite
+#a2enmod rewrite
 
 #Set folder rights once more
 cd /var/ && chown -R www-data:www-data www
 
 #restart Apache2
-service apache2 restart
+#service apache2 restart
 
 #To make sure Apache starts in a good state we stop it once more
-service apache2 stop
-/etc/init.d/apache2 stop
+#service apache2 stop
+#/etc/init.d/apache2 stop
 
 #Start Apache
 /usr/sbin/apache2 -D FOREGROUND
