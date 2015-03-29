@@ -27,7 +27,7 @@ if [ $restore -eq 0 ]; then
 		STATIC_OPTIONS="--full-if-older-than 14D --s3-use-new-style --s3-european-buckets"
 		CLEAN_UP_TYPE="remove-all-but-n-full"
 		CLEAN_UP_VARIABLE="4"
-EOL
+                EOL
  
 		#set our cronjob ot something to make it run every x hours
 		#crontab -l > backupjob
