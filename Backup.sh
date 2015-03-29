@@ -15,7 +15,7 @@ if [ $restore -eq 0 ]; then
 	if [ -f /duplicity/duplicity-backup.conf ] then
      	echo the config file exist we are going to start the backup
      	#while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ;done
-	else
+     fi
     	echo the config file does not exist we are going to make it and make cron options
     #create config file
 		cat >>/duplicity/duplicity-backup.conf <<EOL
@@ -36,7 +36,6 @@ EOL
 		#crontab backupjob
 		#rm backupjob
 		while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ; done
-	fi
 
 else
 #So the restore eq value said it's not 0 so we are going to do a restore! and make a cronjob afterwarts
