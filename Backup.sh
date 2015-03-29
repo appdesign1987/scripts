@@ -42,6 +42,3 @@ EOL
 #So the restore eq value said it's not 0 so we are going to do a restore! and make a cronjob afterwarts
 #sh /duplicity/duplicity-backup.sh --restore $Backupfolder
 #fi
-
-
-
