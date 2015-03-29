@@ -28,15 +28,13 @@ chmod +x /duplicity/duplicity-backup.sh
 		CLEAN_UP_TYPE="remove-all-but-n-full"
 		CLEAN_UP_VARIABLE="4"
 EOL
- 
-		#set our cronjob ot something to make it run every x hours
+ 		#set our cronjob ot something to make it run every x hours
 		#crontab -l > backupjob
 		#echo "0 */$hours * * * sh /duplicity/duplicity-backup.sh --backup --full" >> backupjob
 		#install cron job
 		#crontab backupjob
 		#rm backupjob
-		while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ; done
-
+         	while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ; done
 #else
 #So the restore eq value said it's not 0 so we are going to do a restore! and make a cronjob afterwarts
 #sh /duplicity/duplicity-backup.sh --restore $Backupfolder
