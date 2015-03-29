@@ -14,7 +14,7 @@ chmod +x /duplicity/duplicity-backup.sh
 if [ $restore -eq 0 ]; then
 	if [ -f /duplicity/duplicity-backup.conf ] then
      	echo the config file exist we are going to start the backup
-     	while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ;done
+     	#while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ;done
 	else
     	echo the config file does not exist we are going to make it and make cron options
     #create config file
