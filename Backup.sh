@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/usr/bin/bash
 
 #create folder for duplicity
 mkdir /duplicity
@@ -11,10 +11,11 @@ chmod +x /duplicity/duplicity-backup.sh
 
 # check if we need to do a restore if not then check if duplicity-backup.conf exist
 # if restore is yes we are going to skip all of this and restore the files.
-if [ $restore -eq 0 ]; then
+#if [ $restore -eq 0 ]; then
 	if [ -f /duplicity/duplicity-backup.conf ] then
      	echo the config file exist we are going to start the backup
-     	#while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ;done
+     	while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ;done
+     	.
      fi
     	echo the config file does not exist we are going to make it and make cron options
     #create config file
@@ -37,10 +38,10 @@ EOL
 		#rm backupjob
 		while true; do sh /duplicity/duplicity-backup.sh --backup; sleep h$hours ; done
 
-else
+#else
 #So the restore eq value said it's not 0 so we are going to do a restore! and make a cronjob afterwarts
-sh /duplicity/duplicity-backup.sh --restore $Backupfolder
-fi
+#sh /duplicity/duplicity-backup.sh --restore $Backupfolder
+#fi
 
 
 
