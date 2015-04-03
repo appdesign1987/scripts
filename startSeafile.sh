@@ -2,7 +2,7 @@
 #EDIT THE FOLLOWING OPTIONS ACCORDING THE RIGHT VERSION
 
 #set version of seafile
-export seafileversion=4.0.6
+export seafileversion=4.1.2
 
 #set $directory
 export directory=/srv/seafile/seafile-server-$seafileversion
@@ -26,7 +26,7 @@ fi
 rm /srv/seafile/seafile-server-latest
 
 #download latest seafile-server version
-cd /tmp && wget https://bitbucket.org/haiwen/seafile/downloads/seafile-server_$seafileversion_x86-64.tar.gz
+cd /tmp && wget https://bitbucket.org/haiwen/seafile/downloads/seafile-server_$seafileversio_x86-64.tar.gz
 
 #extract downloaded seafile-server-version
 cd /tmp && tar zxvf seafile-server_*.tar.gz
