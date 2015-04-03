@@ -26,7 +26,7 @@ fi
 rm /srv/seafile/seafile-server-latest
 
 #download latest seafile-server version
-cd /tmp && wget https://bitbucket.org/haiwen/seafile/downloads/seafile-server_$seafileversio_x86-64.tar.gz
+cd /tmp && wget https://bitbucket.org/haiwen/seafile/downloads/seafile-server_4.1.2_x86-64.tar.gz
 
 #extract downloaded seafile-server-version
 cd /tmp && tar zxvf seafile-server_*.tar.gz
