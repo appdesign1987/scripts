@@ -1,14 +1,26 @@
+#!/usr/bin/env bash
+
+#Om de data te bewaren hebben we de volgende volumes gemount 
+# /var/vmail
+# /srv/
+# /var/lib/mysql
+# /backup
+# /etc/nginx
+# /etc/pure-ftpd
+#Daarnaast willen we altijd up-to-date zijn dus gaan we nu eerst alles updaten en daarna installeren.
+apt-get update
+apt-get -y upgrade
 
 #fix to get pure-ftpd working
 
 # install package building helpers
-RUN apt-get -y --force-yes install dpkg-dev debhelper
+apt-get -y --force-yes install dpkg-dev debhelper
 
 # install dependancies
-RUN apt-get -y build-dep pure-ftpd
+apt-get -y build-dep pure-ftpd
 
 # build from source
-RUN mkdir /tmp/pure-ftpd/ && \
+mkdir /tmp/pure-ftpd/ && \
     cd /tmp/pure-ftpd/ && \
     apt-get source pure-ftpd && \
     cd pure-ftpd-* && \
@@ -16,12 +28,15 @@ RUN mkdir /tmp/pure-ftpd/ && \
     dpkg-buildpackage -b -uc
     
 # install the new deb files
-RUN dpkg -i /tmp/pure-ftpd/pure-ftpd-common*.deb
-RUN apt-get -y install openbsd-inetd
-RUN dpkg -i /tmp/pure-ftpd/pure-ftpd_*.deb
+dpkg -i /tmp/pure-ftpd/pure-ftpd-common*.deb
+apt-get -y install openbsd-inetd
+dpkg -i /tmp/pure-ftpd/pure-ftpd_*.deb
 
 # Prevent pure-ftpd upgrading
-RUN apt-mark hold pure-ftpd pure-ftpd-common
+apt-mark hold pure-ftpd pure-ftpd-common
 
 #install Ajenti the control panel
-RUN apt-get -y install ajenti-v ajenti-v-mail ajenti-v-ftp-pureftpd ajenti-v-php-fpm ajenti-v-nginx ajenti-v-mysql
+apt-get -y install ajenti-v ajenti-v-mail ajenti-v-ftp-pureftpd ajenti-v-php-fpm ajenti-v-nginx ajenti-v-mysql
+
+#En nu gaan we ajenti starten
+./etc/init.d/ajenti start
