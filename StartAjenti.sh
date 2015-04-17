@@ -23,8 +23,8 @@ mv /var/lib/mysql /data/mysql
 ln -s /data/mysql /var/lib/mysql
 mv /backup /data/backup
 ln -s /data/backup /backup
-mv /etc/nginx /data/nginx
-ln -s /data/nginx /etc/nginx
+mv /etc/nginx/conf.d /data/nginx/conf.d
+ln -s /data/nginx/conf.d /etc/nginx/conf.d
 mv /etc/pure-ftpd /data/pureftpd
 ln -s /data/pureftpd /etc/pure-ftpd
 mv /etc/ajenti /data/ajenti-config
