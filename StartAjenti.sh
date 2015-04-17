@@ -34,3 +34,9 @@ ln -s /data/exim4 /etc/exim4
 
 #En nu gaan we ajenti starten
 /usr/bin/ajenti-panel -v
+
+#php5-fpm starten we ook
+cd /etc/init.d/ && ./php5-fpm start
+
+#nginx deamon starten we ook
+cd /etc/init.d/ && ./nginx start
