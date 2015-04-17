@@ -43,4 +43,4 @@ apt-mark hold pure-ftpd pure-ftpd-common
 apt-get -y install ajenti-v ajenti-v-mail ajenti-v-ftp-pureftpd ajenti-v-php-fpm ajenti-v-nginx ajenti-v-mysql
 
 #En nu gaan we ajenti starten
-/usr/bin/ajenti-panel -v
+cd /etc/init.d/ && ./ajenti restart
