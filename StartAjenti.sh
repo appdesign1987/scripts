@@ -44,4 +44,4 @@ apt-get -y install ajenti-v ajenti-v-mail ajenti-v-ftp-pureftpd ajenti-v-php-fpm
 
 #En nu gaan we ajenti starten
 cd /etc/init.d/ && ./ajenti stop
-
+/usr/bin/ajenti-panel -v
