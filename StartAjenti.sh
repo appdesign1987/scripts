@@ -7,9 +7,13 @@
 # /backup
 # /etc/nginx
 # /etc/pure-ftpd
+#/etc/ajenti
 #Daarnaast willen we altijd up-to-date zijn dus gaan we nu eerst alles updaten en daarna installeren.
 apt-get update
 apt-get -y upgrade
+
+#install ajenti
+
 
 #fix to get pure-ftpd working
 
