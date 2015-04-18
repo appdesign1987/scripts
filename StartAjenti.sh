@@ -27,12 +27,23 @@ mv /etc/ajenti /data/ajenti-config
 ln -s /data/ajenti-config /etc/ajenti
 mv /etc/exim4 /data/exim4
 ln -s /data/exim4 /etc/exim4
+mv /srv /data/www
+ln -s /data/www /srv
 
 #php5-fpm starten we ook
 cd /etc/init.d/ && ./php5-fpm start
 
 #nginx deamon starten we ook
 cd /etc/init.d/ && ./nginx start
+
+#nginx deamon starten we ook
+cd /etc/init.d/ && ./mysql start
+
+#nginx deamon starten we ook
+cd /etc/init.d/ && ./pure-ftpd start
+
+#nginx deamon starten we ook
+cd /etc/init.d/ && ./exim4 start
 
 #En nu gaan we ajenti starten
 /usr/bin/ajenti-panel -v
