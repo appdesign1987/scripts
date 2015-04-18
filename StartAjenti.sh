@@ -12,10 +12,6 @@
 apt-get update
 apt-get -y upgrade
 
-#we gaan eerst ajenti stoppen om alles te kunnen verplaatsen
-#cd /etc/init.d/ && ./ajenti stop && ./nginx stop && ./exi
-
-
 #creating symlinks and moving folder to keep everything persistent
 mv /var/vmail /data/vmail
 ln -s /data/vmail /var/vmail
@@ -32,11 +28,11 @@ ln -s /data/ajenti-config /etc/ajenti
 mv /etc/exim4 /data/exim4
 ln -s /data/exim4 /etc/exim4
 
-#En nu gaan we ajenti starten
-/usr/bin/ajenti-panel -v
-
 #php5-fpm starten we ook
 cd /etc/init.d/ && ./php5-fpm start
 
 #nginx deamon starten we ook
 cd /etc/init.d/ && ./nginx start
+
+#En nu gaan we ajenti starten
+/usr/bin/ajenti-panel -v
