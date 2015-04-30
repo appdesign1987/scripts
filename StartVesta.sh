@@ -3,6 +3,7 @@
 apt-get update && apt-get upgrade -y
 echo moving everything to persistent location
 mv /usr/local/vesta /persistent
+rm -R /usr/local/vesta
 ln -s /persistent/vesta /usr/local/vesta
 
 echo starting everything
