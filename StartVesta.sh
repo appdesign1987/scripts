@@ -2,9 +2,15 @@
 
 apt-get update && apt-get upgrade -y
 echo moving everything to persistent location
+#moving Vesta
 mv /usr/local/vesta /persistent
 rm -R /usr/local/vesta
 ln -s /persistent/vesta /usr/local/vesta
+
+#moving Mysql
+mv /var/lib/mysql /persistent
+rm -R /var/lib/mysql
+ln -s /persisent/mysql /var/lib/mysql
 
 echo starting everything
 cd /etc/init.d/ && ./vesta start
