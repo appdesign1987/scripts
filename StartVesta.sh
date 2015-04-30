@@ -10,7 +10,7 @@ ln -s /persistent/vesta /usr/local/vesta
 #moving /home
 mv /home /persistent
 rm -R /home
-ln -s /persisent/home /home
+ln -s /persistent/home /home
 
 #moving Mysql
 mv /var/lib/mysql /persistent
