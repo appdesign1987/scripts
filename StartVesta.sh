@@ -7,6 +7,11 @@ mv /usr/local/vesta /persistent
 rm -R /usr/local/vesta
 ln -s /persistent/vesta /usr/local/vesta
 
+#moving /home
+mv /home /persistent
+rm -R /home
+ln -s /persisent/home /home
+
 #moving Mysql
 mv /var/lib/mysql /persistent
 rm -R /var/lib/mysql
