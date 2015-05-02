@@ -1,4 +1,4 @@
-#!/bin/shress
+#!/bin/sh
 # License is public domain.
 
 DAEMON=/usr/sbin/dovecot
