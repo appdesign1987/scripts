@@ -16,10 +16,11 @@ rm /etc/nginx/conf.d/1*
 
 #copy dovecot start/stop script
 cd /scripts && cp dovecot /etc/init.d/
+cd /etc/init.d/ && chmod a+x dovecot
 
 #copy vsftpd start/stop script
 cd /scripts && cp vsftpd /etc/init.d/
-
+cd /etc/init.d/ && chmod a+x vsftpd
 
 #moving /home
 mv /home /persistent
