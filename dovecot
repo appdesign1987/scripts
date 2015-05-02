@@ -1,7 +1,7 @@
 #!/bin/shress
 # License is public domain.
 
-DAEMON=/usr/local/sbin/dovecot
+DAEMON=/usr/sbin/dovecot
 
 test -x $DAEMON || exit 1
 set -e
