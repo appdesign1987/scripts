@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/usr/bin/env bash
 # License is public domain.
 
 DAEMON=/usr/sbin/dovecot
