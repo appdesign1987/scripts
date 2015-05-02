@@ -17,6 +17,26 @@ mv /var/lib/mysql /persistent
 rm -R /var/lib/mysql
 ln -s /persistent/mysql /var/lib/mysql
 
+#copy passwd file every 60 seconds
+while true; do
+  cp -f /etc/passwd /persistent
+  sleep 60
+done
+
+#copy group file every 60 seconds
+while true; do
+  cp -f /etc/group /persistent
+  sleep 60
+done
+
+#move passwd file
+rm /etc/passwd
+mv /persistent/passwd /etc
+
+#move group file
+rm /etc/group
+mv /persistent/group /etc
+
 echo starting everything
 cd /etc/init.d/ && ./vesta start
 cd /etc/init.d/ && ./mysql start
