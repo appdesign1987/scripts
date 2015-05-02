@@ -9,8 +9,8 @@ ln -s /persistent/vesta /usr/local/vesta
 
 #setting localip in Vesta
 cd /usr/local/vesta/data/ips && mv * 127.0.0.1
-rm /etc/apache2/conf.d/1*
-rm /etc/nginx/conf.d/1*
+#rm /etc/apache2/conf.d/1*
+#rm /etc/nginx/conf.d/1*
 #cp /usr/local/vesta/data/ips/127.0.0.1 /etc/apache2/conf.d/
 #cp /usr/local/vesta/data/ips/127.0.0.1 /etc/nginx/conf.d/ 
 
