@@ -9,6 +9,8 @@ ln -s /persistent/vesta /usr/local/vesta
 
 #setting localip in Vesta
 cd /usr/local/vesta/data/ips && mv * 127.0.0.1
+cd /etc/apache2/conf.d && sed -i -- 's/172.*.*.*/127.0.0.1/g' *
+cd /etc/nginx/conf.d && sed -i -- 's/172.*.*.*/127.0.0.1/g' *
 #rm /etc/apache2/conf.d/1*
 #rm /etc/nginx/conf.d/1*
 #cp /usr/local/vesta/data/ips/127.0.0.1 /etc/apache2/conf.d/
@@ -48,6 +50,7 @@ cd /etc/init.d/ && ./exim4 start
 cd /etc/init.d/ && ./apache2 start
 cd /etc/init.d/ && ./bind9 start
 cd /etc/init.d/ && ./dovecot start
+cd /etc/init.d/ && ./vsftpd start
 
 #copy passwd file every 60 seconds
 while true; do
