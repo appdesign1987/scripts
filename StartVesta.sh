@@ -20,7 +20,7 @@ ln -s /persistent/mysql /var/lib/mysql
 #moving etc
 mv /etc /etc-data
 rm -R /etc
-ln -s /etc-data /etc
+ln -s /etc-data/etc /etc
 
 
 echo starting everything
