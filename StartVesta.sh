@@ -17,12 +17,6 @@ mv /var/lib/mysql /persistent
 rm -R /var/lib/mysql
 ln -s /persistent/mysql /var/lib/mysql
 
-#moving etc
-mv /etc /etc-data
-rm -R /etc
-ln -s /etc-data/etc /etc
-
-
 echo starting everything
 cd /etc/init.d/ && ./vesta start
 cd /etc/init.d/ && ./mysql start
