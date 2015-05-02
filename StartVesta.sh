@@ -20,11 +20,6 @@ ln -s /persistent/mysql /var/lib/mysql
 #copy passwd file every 60 seconds
 while true; do
   cp -f /etc/passwd /persistent
-  sleep 60
-done
-
-#copy group file every 60 seconds
-while true; do
   cp -f /etc/group /persistent
   sleep 60
 done
