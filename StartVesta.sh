@@ -17,6 +17,16 @@ mv /var/lib/mysql /persistent
 rm -R /var/lib/mysql
 ln -s /persisent/mysql /var/lib/mysql
 
+#moving passwd
+mv /etc/passwd /persistent
+rm -R /etc/passwd
+ln -s /persisent/passwd /etc/passwd
+
+#moving passwd
+mv /etc/group /persistent
+rm -R /etc/group
+ln -s /persisent/group /etc/group
+
 echo starting everything
 cd /etc/init.d/ && ./vesta start
 cd /etc/init.d/ && ./mysql start
