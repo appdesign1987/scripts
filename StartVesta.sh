@@ -14,6 +14,9 @@ rm /etc/nginx/conf.d/1*
 #cp /usr/local/vesta/data/ips/127.0.0.1 /etc/apache2/conf.d/
 #cp /usr/local/vesta/data/ips/127.0.0.1 /etc/nginx/conf.d/ 
 
+#copy dovecot start/stop script
+cd /scripts && cp dovecot /etc/init.d/
+
 #moving /home
 mv /home /persistent
 rm -R /home
@@ -39,7 +42,7 @@ cd /etc/init.d/ && ./nginx start
 cd /etc/init.d/ && ./exim4 start
 cd /etc/init.d/ && ./apache2 start
 cd /etc/init.d/ && ./bind9 start
-cd /etc/init.d/ && ./fail2ban start
+cd /etc/init.d/ && ./dovecot start
 
 #copy passwd file every 60 seconds
 while true; do
