@@ -29,6 +29,9 @@ cd /etc/init.d/ && chmod a+x dovecot
 cd /scripts && cp vsftpd /etc/init.d/
 cd /etc/init.d/ && chmod a+x vsftpd
 
+#fix for vsftpd
+cd /var/run && mkdir vsftpd && cd /var/run/vsftpd && mkdir empty
+
 #moving /home
 mv /home /persistent
 rm -R /home
