@@ -43,7 +43,6 @@ rm -R /var/lib/mysql
 ln -s /persistent/mysql /var/lib/mysql
 
 #move passwd file
-rm /etc/passwd
 mv /persistent/passwd /etc
 
 #move group file
