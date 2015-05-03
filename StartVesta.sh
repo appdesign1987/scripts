@@ -32,6 +32,11 @@ cd /etc/init.d/ && chmod a+x vsftpd
 #fix for vsftpd
 cd /var/run && mkdir vsftpd && cd /var/run/vsftpd && mkdir empty
 
+#moving roundcube config to be persistent when dockerfile is setup again
+mv /etc/roundcube /persistent
+rm -R /etc/roundcube
+ln -s /persistent/roundcube /etc/roundcube
+
 #moving /home
 mv /home /persistent
 rm -R /home
