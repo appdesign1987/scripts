@@ -46,7 +46,6 @@ ln -s /persistent/mysql /var/lib/mysql
 mv /persistent/passwd /etc
 
 #move group file
-rm /etc/group
 mv /persistent/group /etc
 
 echo starting everything
