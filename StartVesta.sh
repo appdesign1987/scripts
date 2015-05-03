@@ -15,7 +15,7 @@ cd /install/backup && mv 1* apache2.conf.back
 cd /etc/nginx/conf.d/ && cp 1* /install/backup
 cd /install/backup && mv 1* nginx.conf.back
 cd /etc/apache2/conf.d && sed -i -- 's/172.*.*.*:80/127.0.0.1:80/g' * && sed -i -- 's/172.*.*.*:8443/127.0.0.1:8443/g' *
-cd /etc/nginx/conf.d && sed -i -- 's/172.*.*.*:80/80/g' * && sed -i -- 's/172.*.*.*:8080/127.0.0.1:8080/g' *
+cd /etc/nginx/conf.d && sed -i -- 's/172.*.*.*:80 default;/80 default;/g' * && sed -i -- 's/172.*.*.*:8080/127.0.0.1:8080/g' *
 #rm /etc/apache2/conf.d/1*
 #rm /etc/nginx/conf.d/1*
 #cp /usr/local/vesta/data/ips/127.0.0.1 /etc/apache2/conf.d/
