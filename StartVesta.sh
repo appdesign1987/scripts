@@ -37,6 +37,11 @@ mv /etc/roundcube /persistent
 rm -R /etc/roundcube
 ln -s /persistent/roundcube /etc/roundcube
 
+#moving apache2 config to be persistent when dockerfile is setup again
+mv /etc/apache2 /persistent
+rm -R /etc/apache2
+ln -s /persistent/apache2 /etc/apache2
+
 #moving /home
 mv /home /persistent
 rm -R /home
