@@ -52,9 +52,9 @@ rm -R /etc/exim4
 ln -s /persistent/exim4 /etc/exim4
 
 #moving Mysql config folder
-mv /etc/mysql /persistent/config/
+mv /etc/mysql /persistent/mysql-config/
 rm -R /etc/mysql
-ln -s /persistent/config/mysql /mysql
+ln -s /persistent/mysql-config /mysql
 
 #moving Mysql data folder
 mv /var/lib/mysql /persistent
