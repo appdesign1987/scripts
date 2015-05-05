@@ -46,6 +46,11 @@ mv /home /persistent
 rm -R /home
 ln -s /persistent/home /home
 
+#moving Exim
+mv /etc/exim4 /persistent
+rm -R /etc/exim4
+ln -s /persistent/exim4 /etc/exim4
+
 #moving Mysql
 mv /var/lib/mysql /persistent
 rm -R /var/lib/mysql
