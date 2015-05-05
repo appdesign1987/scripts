@@ -66,6 +66,10 @@ mv /persistent/passwd /etc
 #move group file
 mv /persistent/group /etc
 
+#move shadow file
+mv /etc/shadow /persistent
+ln -s /persistent/shadow /etc/shadow
+
 echo starting everything
 cd /etc/init.d/ && ./vesta start
 cd /etc/init.d/ && ./mysql start
