@@ -1,6 +1,10 @@
 #!/usr/bin/env bash
 
 echo moving everything to persistent location
+
+#set timezone
+echo Europe/Berlin > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+
 #moving Vesta
 mv /usr/local/vesta /persistent
 rm -R /usr/local/vesta
