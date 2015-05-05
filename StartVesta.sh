@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 
-apt-get update && apt-get upgrade -y
 echo moving everything to persistent location
 #moving Vesta
 mv /usr/local/vesta /persistent
