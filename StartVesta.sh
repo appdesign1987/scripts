@@ -71,8 +71,7 @@ mv /persistent/passwd /etc
 mv /persistent/group /etc
 
 #move shadow file
-mv /etc/shadow /persistent
-ln -s /persistent/shadow /etc/shadow
+mv /persistent/shadow /etc
 
 echo starting everything
 cd /etc/init.d/ && ./vesta start
@@ -88,6 +87,7 @@ cd /etc/init.d/ && ./vsftpd start
 while true; do
   cp -f /etc/passwd /persistent
   cp -f /etc/group /persistent
+  cp -f /etc/shadow /persistent
   sleep 60
 done
 
