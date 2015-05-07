@@ -1,5 +1,10 @@
 #!/usr/bin/env bash
 
+#update software to make sure we have al the newest things
+echo updating everything
+apt-get update
+apt-get -y upgrade
+
 echo moving everything to persistent location
 
 #set timezone
