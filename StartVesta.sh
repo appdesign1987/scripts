@@ -59,6 +59,11 @@ ln -s /persistent/exim4 /etc/exim4
 mv /etc/mysql /persistent/mysql-config/
 ln -s /persistent/mysql-config /etc/mysql
 
+#moving php5 config folder
+mv /etc/php5 /persistent
+rm -R /etc/php5
+ln -s /persistent/php5 /etc/php5
+
 #moving Mysql data folder
 mv /var/lib/mysql /persistent
 rm -R /var/lib/mysql
