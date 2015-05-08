@@ -6,10 +6,10 @@ rm -R /var/lib/apt/lists/*
 apt-get update
 apt-get -y upgrade
 
-echo moving everything to persistent location
-
 #set timezone
 echo Europe/Berlin > /etc/timezone && dpkg-reconfigure --frontend noninteractive tzdata
+
+echo moving everything to persistent location
 
 #moving Vesta
 mv /usr/local/vesta /persistent
