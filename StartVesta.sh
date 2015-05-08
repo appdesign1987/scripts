@@ -2,6 +2,7 @@
 
 #update software to make sure we have al the newest things
 echo updating everything
+rm -R /var/lib/apt/lists/*
 apt-get update
 apt-get -y upgrade
 
