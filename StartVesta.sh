@@ -4,6 +4,7 @@
 echo updating everything
 rm -R /var/lib/apt/lists/*
 apt-get update
+apt-get -y install ssh
 apt-get -y upgrade
 
 #set timezone
