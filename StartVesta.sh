@@ -1,5 +1,8 @@
 #!/usr/bin/env bash
 
+#SET export for vesta
+export VESTA=/usr/local/vesta
+
 #update software to make sure we have al the newest things
 echo updating everything
 rm -R /var/lib/apt/lists/*
