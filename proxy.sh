@@ -6,7 +6,7 @@ cd /tmp && git clone https://github.com/appdesign1987/ApacheConfig.git
 cd /tmp/ApacheConfig/ && mv *.conf /etc/apache2/sites-enabled/
 
 # Start apache
-apachtctl start
+cd /etc/init.d/ && ./apache2 start
 
 #ugly hack to make sure the script will not exit.
 /sbin/my_init
