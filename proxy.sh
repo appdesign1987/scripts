@@ -5,4 +5,6 @@ cd /tmp && git clone https://github.com/appdesign1987/ApacheConfig.git
 cd /tmp/ApacheConfig/ && mv *.conf /etc/apache2/sites-enabled/
 
 # Start apache
-/usr/sbin/apache2 -D FOREGROUND
+apachtctl start
+
+
