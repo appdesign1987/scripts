@@ -1,6 +1,7 @@
 #!/bin/bash
 
 #Git clone Apacheconfig
+cd /tmp && rm -Rf ApacheConfig
 cd /tmp && git clone https://github.com/appdesign1987/ApacheConfig.git
 cd /tmp/ApacheConfig/ && mv *.conf /etc/apache2/sites-enabled/
 
