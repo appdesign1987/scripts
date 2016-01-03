@@ -5,3 +5,6 @@ cd /var/www && git clone --branch STABLE https://github.com/phpmyadmin/phpmyadmi
 
 # Start apache
 apachectl start
+
+#ugly hack to make sure the script will not exit.
+/sbin/my_init
