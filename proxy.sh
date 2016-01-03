@@ -7,4 +7,5 @@ cd /tmp/ApacheConfig/ && mv *.conf /etc/apache2/sites-enabled/
 # Start apache
 apachtctl start
 
-
+#ugly hack to make sure the script will not exit.
+/sbin/my_init
