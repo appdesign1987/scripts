@@ -5,6 +5,8 @@ cd /tmp && git clone --branch STABLE https://github.com/phpmyadmin/phpmyadmin.gi
 cd /var/www/html && rm -Rf *
 cd /tmp/phpmyadmin && mv * /var/www/html/
 
+cd /var/www/html && chown -R www-data:www-data *
+
 # Start apache
 cd /etc/init.d/ && ./apache2 start
 
